@@ -31,3 +31,7 @@ output "website_url" {
   description = "Website URL through CloudFront"
   value       = "https://${aws_cloudfront_distribution.site.domain_name}"
 }
+output "github_actions_role_arn" {
+  description = "IAM role ARN used by GitHub Actions OIDC"
+  value       = aws_iam_role.github_actions.arn
+}
