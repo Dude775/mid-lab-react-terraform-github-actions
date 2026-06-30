@@ -34,3 +34,7 @@ _audit/
 Thumbs.db
 .vscode/
 .idea/
+
+# terraform plans
+*.tfplan
+tfplan

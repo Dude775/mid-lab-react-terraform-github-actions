@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "site" {
-  bucket = "${var.project_name}-${var.github_owner}"
+  bucket = lower("${var.project_name}-${var.github_owner}")
 
   tags = merge(var.common_tags, {
     Name = "${var.project_name}-site"
