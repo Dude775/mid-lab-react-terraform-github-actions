@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="‫עמוד-1‬" id="jnQ0slP_yA-RJaBXmWGa">
+    <mxGraphModel dx="1030" dy="630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=#6c8ebf;gradientColor=none;strokeWidth=4;" value="&lt;b&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;Developer&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="140" x="320" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="GitHub Repository" vertex="1">
+          <mxGeometry height="50" width="140" x="80" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="GitHub Actions" vertex="1">
+          <mxGeometry height="50" width="140" x="80" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="IAM Role (OIDC)" vertex="1">
+          <mxGeometry height="50" width="140" x="560" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Amazon S3 Bucket" vertex="1">
+          <mxGeometry height="50" width="140" x="80" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="CloudFront Distribution" vertex="1">
+          <mxGeometry height="50" width="140" x="320" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Browser / End Users" vertex="1">
+          <mxGeometry height="50" width="140" x="560" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-8" edge="1" parent="1" source="AIQ6_qY76JD9-wqLlIXX-1" style="endArrow=classic;html=1;fontSize=11;" target="AIQ6_qY76JD9-wqLlIXX-2" value="git push">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-9" edge="1" parent="1" source="AIQ6_qY76JD9-wqLlIXX-2" style="endArrow=classic;html=1;fontSize=11;" target="AIQ6_qY76JD9-wqLlIXX-3" value="trigger workflow">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-10" edge="1" parent="1" source="AIQ6_qY76JD9-wqLlIXX-3" style="endArrow=classic;html=1;fontSize=11;" target="AIQ6_qY76JD9-wqLlIXX-4" value="assume role">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-11" edge="1" parent="1" source="AIQ6_qY76JD9-wqLlIXX-3" style="endArrow=classic;html=1;fontSize=11;" target="AIQ6_qY76JD9-wqLlIXX-5" value="upload dist files">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-12" edge="1" parent="1" source="AIQ6_qY76JD9-wqLlIXX-3" style="endArrow=classic;html=1;fontSize=11;" target="AIQ6_qY76JD9-wqLlIXX-6" value="create invalidation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-13" edge="1" parent="1" source="AIQ6_qY76JD9-wqLlIXX-7" style="endArrow=classic;html=1;fontSize=11;dashed=1;" target="AIQ6_qY76JD9-wqLlIXX-6" value="https request">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-14" edge="1" parent="1" source="AIQ6_qY76JD9-wqLlIXX-6" style="endArrow=classic;html=1;fontSize=11;dashed=1;" target="AIQ6_qY76JD9-wqLlIXX-5" value="fetch static files">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AIQ6_qY76JD9-wqLlIXX-15" edge="1" parent="1" source="AIQ6_qY76JD9-wqLlIXX-6" style="endArrow=classic;html=1;fontSize=11;dashed=1;" target="AIQ6_qY76JD9-wqLlIXX-7" value="cached response">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
